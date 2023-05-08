@@ -1,0 +1,19 @@
+{
+	"minimumCashout":300,
+	"ad_price":500,
+	"ad_minimum":500,
+	"joinreward":50,
+	"apiUrl":"http://45.92.109.213/",
+	"serverID":1086708395173752892,
+	"AdminPassword":"H4x0r123556044kold**$$$$",
+	"AdminID":"1082249415424737311",
+	"token":"MTA5NDczMDk4NjM5MjEzNzc4OA.GZyFHi.whUDTTDYdRJ56r5u5DUnOG2c7o0IPm7ZsbzH00",
+	"redeemChannel":"1095081183425081364",
+	"fournisseurs":[
+		"https://exe.io/api?api=c46cdfb488626084adc81161d74c25db7dadbae2&url=",
+		"https://clicksfly.com/api?api=01592422242724c327281c9741170793214074a1&url=",
+		"https://shrinkearn.com/api?api=f8778df38e9a2e7ab8b8ada8e4989bcacbda8c07&url=",
+		"https://cutwin.com/api?api=c091c211a2de28be3c2b4a12747ebcc623da4547&url=",
+		"https://payskip.org/api?api=6fd885dca5663048ed7be4498ac7994a6564d0bd&url="
+	]
+}
