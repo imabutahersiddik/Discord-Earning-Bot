@@ -5,10 +5,12 @@
 	"joinreward":50,
 	"apiUrl":"http://45.92.109.213/",
 	"serverID":1086708395173752892,
+	"referral_reward":150,
 	"AdminPassword":"H4x0r123556044kold**$$$$",
 	"AdminID":"1082249415424737311",
 	"token":"MTA5NDczMDk4NjM5MjEzNzc4OA.GZyFHi.whUDTTDYdRJ56r5u5DUnOG2c7o0IPm7ZsbzH00",
 	"redeemChannel":"1095081183425081364",
+	"linkvertiseID":575726,
 	"fournisseurs":[
 		"https://exe.io/api?api=c46cdfb488626084adc81161d74c25db7dadbae2&url=",
 		"https://clicksfly.com/api?api=01592422242724c327281c9741170793214074a1&url=",

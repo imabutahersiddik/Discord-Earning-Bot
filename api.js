@@ -34,7 +34,7 @@ const ad_minimum = config["ad_minimum"]
 const admin = config["AdminID"]
 const ad_price = config["ad_price"]
 const referral_reward = config["referral_reward"]
-
+const lvID = parseInt(config["linkvertiseID"])
 
 
 
@@ -444,7 +444,7 @@ client.on(Events.MessageCreate, async (message) => {
                 "expire": 100
             }).then(res => {
                 if(randomInteger(1, 5) == 3){
-                    var link = linkvertise(res["link"], 575726)
+                    var link = linkvertise(res["link"], lvID)
                     message.reply("[+] The link has been sent to your DM's")
                     return message.author.send("[+] Click on this link to get your reward : " + link)
                 }else{
