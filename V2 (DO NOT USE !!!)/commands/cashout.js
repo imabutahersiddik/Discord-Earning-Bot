@@ -1,4 +1,4 @@
-async function cashout(client, message, ecoClient, args) {
+exports.run = async(client, message, args, ecoClient, EmbedBuilder, pe) => {
     if(args.length < 3){
         return message.reply("[+] Command syntax :\n\n+cashout <amount> <paypal-email>")
     }
@@ -33,4 +33,4 @@ async function cashout(client, message, ecoClient, args) {
 }
 
 
-module.exports = { cashout }
+exports.name = "cashout";

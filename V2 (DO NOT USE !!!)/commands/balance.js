@@ -1,4 +1,4 @@
-async function balance(message){
+exports.run = async(client, message, args, ecoClient, EmbedBuilder, pe) => {
     var Embed = new EmbedBuilder()
     .setColor(0x0099FF)
     .setTitle('Balance')
@@ -11,9 +11,9 @@ async function balance(message){
     });
     
     return message.reply({
-    embeds: [Embed]
+        embeds: [Embed]
     });
     
 }
 
-module.exports = { balance }
+exports.name = "balance";

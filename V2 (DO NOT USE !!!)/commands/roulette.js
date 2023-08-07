@@ -1,4 +1,4 @@
-async function roulette(message, ecoClient, args) {
+async function roulette(client, message, args, ecoClient, EmbedBuilder, pe) {
 
     var bet = args[1]
     var red_or_black = args[2]
@@ -15,7 +15,7 @@ async function roulette(message, ecoClient, args) {
         .setColor(0x0099FF)
         .setTitle('Roulette')
         .setDescription('The GIF is the result :eyes:')
-        .addFields({name:"100% Random", value:"Our software generate an 100% random number which makes him provably fair."})
+        .addFields({name:"100% Random", value:"Our software generate a 100% random number."})
         .setThumbnail('https://thumbs.gfycat.com/EnchantedIdolizedJunebug-size_restricted.gif');
     
 

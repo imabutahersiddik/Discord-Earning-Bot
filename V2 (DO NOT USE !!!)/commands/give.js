@@ -1,4 +1,4 @@
-async function give(message, args, ecoClient){
+exports.run = async(client, message, args, ecoClient, EmbedBuilder, pe) => {
     
     if(args.length < 3){
         return message.reply("[+] Command syntax :\n\n+give <amount> <user_id>")
@@ -11,4 +11,4 @@ async function give(message, args, ecoClient){
 
 }
 
-module.exports = { give }
+exports.name = "give";

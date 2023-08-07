@@ -1,4 +1,4 @@
-async function guess_the_number(message, ecoClient, args) {
+exports.run = async(client, message, args, ecoClient, EmbedBuilder, pe) => {
 
 
     var result = randomInteger(1, 3)
@@ -38,4 +38,4 @@ async function guess_the_number(message, ecoClient, args) {
 }
 
 
-module.exports = {guess_the_number}
+exports.name = "random";

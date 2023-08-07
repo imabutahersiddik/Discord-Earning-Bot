@@ -54,6 +54,17 @@ function RandomFloat(min, max, decimals) { return parseFloat((Math.random() * (m
 
 const client = new Client({ intents: [ GatewayIntentBits.DirectMessages, GatewayIntentBits.Guilds, GatewayIntentBits.GuildBans, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, ]});
 
+client.commands = new Discord.Collection();
+const commands = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
+
+for (const file of commands) {
+  const commandName = file.split(".")[0];
+  const command = require(`./commands/${file}`);
+  console.log(`Attempting to load command ${commandName}`);
+  client.commands.set(commandName, command);
+}
+
+
 (async () => { await eco.selectDriver("sqlite"); })();
 
 let Pastee = new PasteeAPI(adm["PasteeApiKey"]);
@@ -318,14 +329,25 @@ app.listen(80, () => {
 
 
 client.on(Events.MessageCreate, async (message) => {
-    if(message.author.bot) return;
+    if (message.author.bot) return;
+  
+    if (message.content.indexOf("+") !== 0) return;
+
     const args = message.content.trim().split(/ +/g);
     var ecoClient = new eco.guildUser(message.author.id, pe.SERVER_ID);
     ErrorEmbed.data.fields = [];
+    const command = args.shift().toLowerCase();
+    const cmd = client.commands.get(command);
+
+
+    if (!cmd) return;
+  
+    cmd.run(client, message, args, ecoClient, EmbedBuilder, pe);
 
 
 
-    if (message.content == "+bal" || message.content == "+balance") {
+    /*
+    if (message.content.startsWith("+bal") || message.content.startsWith("+balance")) {
         
         balance(message)
 
@@ -370,6 +392,7 @@ client.on(Events.MessageCreate, async (message) => {
         guess_the_number(message, ecoClient, args)
 
     }
+    */
 })
 
 

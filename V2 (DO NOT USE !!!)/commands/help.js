@@ -1,4 +1,4 @@
-async function help(message, pe){
+exports.run = async(client, message, args, ecoClient, EmbedBuilder, pe) => {
     
     var Embed = new EmbedBuilder()
     .setColor(0x0099FF)
@@ -49,3 +49,5 @@ async function help(message, pe){
         embeds: [Embed]
     });   
 }
+
+exports.name = "help";

@@ -1,4 +1,4 @@
-async function earn(message, args, pe){
+exports.run = async(client, message, args, ecoClient, EmbedBuilder, pe) => {
     var url = pe.API_URL + "createCode?password=" + pe.ADMINPASSWORD + "&id=" + message.author.id
 
     request(url, function(error, response, body) {
@@ -27,5 +27,7 @@ async function earn(message, args, pe){
     
         }).catch(err => {});
     });
-    
 }
+
+
+exports.name = "earn";
