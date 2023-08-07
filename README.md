@@ -17,7 +17,7 @@
   <h3 align="center">Short'n'Money</h3>
 
   <p align="center">
-    This bot allows you to earn money for both you and your users 
+    This bot allows you earning money for both you and your users 
   </p>
 </div>
 
